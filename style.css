@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    padding: 20px;
+}
+
+#board {
+    width: 380px;
+    margin: 20px auto;
+}
+
+#status {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #00c853;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00e676;
+}
