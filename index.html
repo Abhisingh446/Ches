@@ -6,9 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css"/>
+    href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css"/>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -18,15 +17,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.
 <div class="container">
     <h1>♟️ Pro Chess Arena</h1>
 
+    <!-- THIS IS REQUIRED -->
     <div id="status"></div>
     <div id="board"></div>
 
-    <div class="controls">
-        <button onclick="resetGame()">Restart Game</button>
-    </div>
+    <button onclick="resetGame()">Restart Game</button>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.13.4/chess.min.js"></script>
+<!-- chess.js must be included before script.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.1/chess.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
 <script src="script.js"></script>
 
