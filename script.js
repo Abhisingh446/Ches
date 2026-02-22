@@ -11,18 +11,15 @@ function updateStatus() {
         status = 'Game over, drawn position';
     } else {
         status = moveColor + ' to move';
-
         if (game.in_check()) {
             status += ' (Check)';
         }
     }
-
-    document.getElementById('status').innerHTML = status;
+    document.getElementById('status').innerText = status;
 }
 
 function onDragStart(source, piece) {
     if (game.game_over()) return false;
-
     if ((game.turn() === 'w' && piece.search(/^b/) !== -1) ||
         (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
         return false;
@@ -37,7 +34,6 @@ function onDrop(source, target) {
     });
 
     if (move === null) return 'snapback';
-
     updateStatus();
 }
 
@@ -54,7 +50,6 @@ function resetGame() {
 board = Chessboard('board', {
     draggable: true,
     position: 'start',
-    pieceTheme: 'https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/img/chesspieces/wikipedia/{piece}.png',
     onDragStart: onDragStart,
     onDrop: onDrop,
     onSnapEnd: onSnapEnd
